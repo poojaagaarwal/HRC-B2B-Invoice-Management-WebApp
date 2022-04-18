@@ -1,0 +1,15 @@
+.App {
+  min-width: 100%;
+  max-width:fit-content;
+  min-height: 100%;
+  max-height: fit-content;
+}
+.App .head {
+  color: white;
+  display: block;
+  width: max-content;
+}
+
+.App-link {
+  color: #61dafb;
+}

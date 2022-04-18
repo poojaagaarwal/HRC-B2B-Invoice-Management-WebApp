@@ -1,0 +1,46 @@
+.control {
+    margin-left: 2rem;
+    display: flex;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.alter {
+    margin-right: 2rem;
+    margin-left: 5rem;
+    -webkit-user-select: none;
+    user-select: none;
+}
+div {
+    display: flex;
+}
+.control Button {
+    flex: 1;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #2c2834;
+}
+.control Button:disabled {
+    color: #5b5b5b;
+    background-color: #2c283492;
+}
+.control .middleButton {
+    margin-left: .15rem;
+    margin-right: .15rem;
+}
+.control #refresh-button {
+    font-size: 1em;
+}
+.control #search {
+    background-color: #ffffffb8;
+    width: 100%;
+}
+.control #search:focus {
+    background-color: unset;
+    color: white;
+    -webkit-user-select: text;
+    user-select: text;
+}
+.control #search::-webkit-inner-spin-button, 
+.control #search::-webkit-outer-spin-button {
+    appearance: none;
+}
