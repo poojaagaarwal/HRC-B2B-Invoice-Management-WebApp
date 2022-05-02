@@ -9,6 +9,9 @@ import axios from 'axios';
 export default function TableUnit({setSelectedFlatRows, setIsOneRowSelected, setIsRowSelected, updateTable}) {
     const [tableData, setTableData] = useState([]);
     useEffect(()=>{
+        axios.defaults.baseURL = 'http://localhost:8080/HRC61148WK/';
+        axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+        axios.defaults.headers.post['Access-Control-Allow-Methods'] = '*';
         axios.get("http://localhost:8080/HRC61148WK/View").then(response => setTableData(response.data));
     },[])
     
@@ -106,8 +109,7 @@ export default function TableUnit({setSelectedFlatRows, setIsOneRowSelected, set
                         {headerGroup.headers.map(column => (
                             <TableCell className='tableCell' {...column.getHeaderProps(column.getSortByToggleProps())}>{
                                 column.render('Header')}
-                                <span>
-                                {
+                                <span>{
                                     column.isSorted ? ' ' + (column.isSortedDesc ? 'ᐁ' : 'ᐃ') : ''
                                 }
                                 </span>

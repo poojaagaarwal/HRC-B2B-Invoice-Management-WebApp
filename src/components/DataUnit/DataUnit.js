@@ -9,8 +9,6 @@ export default function DataUnit(props) {
     const [isOneRowSelected, setIsOneRowSelected] = useState(false);
     const [isRowSelected, setIsRowSelected] = useState(false);
     const [updateTable, setUpdateTable] = useState(false);
-    const [defaultFilterValue, setDefaultFilterValue] = useState(null);
-    const [invoiceIDFilterValue, setinvoiceIDFilterValue] = useState(null);
 
     return (
         <div className='dataUnit'>
